@@ -1,0 +1,18 @@
+{% extends  'base.html'  %}
+
+{% block body  %}
+
+<div class="card shadow">
+    <div class="card-body shadow">
+        <div class="card-title">
+            <h5>update task</h5>
+            <form  method="POST">
+                 {%  csrf_token  %}
+                 {{form.as_p}}
+                 <button  type="submit">update</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{%  endblock  %}
