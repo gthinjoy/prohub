@@ -6,7 +6,7 @@
 {%  block title  %}
     cart - Myshox fashions &  Co
 {%  endblock  %}
-<body  style="background-color:red">
+<body>
 {%  block content  %}
     {%  if not cart_items  %}
 <div>
@@ -27,6 +27,7 @@
           </h1>
           <br>
     </div>
+</div>
 <div  class="row  mx-auto">
     <div  class="col-12  col-sm-12  col-md-12  col-lg-6  text-center">
             <table  class="table  my_custom_table">
@@ -41,7 +42,7 @@
                 {%  for cart_item in cart_items   %}
                 <tr>
                     <td>
-                        <a  href="cart_item.product.get_absolute_url"><img  src="{{cart_item.product.image.url}}"   alt=""  style="width:100px;height:100px;" class="float-left  grounded  custom_image"></a>
+                        <img  src="{{cart_item.product.image.url}}"   alt=""  style="width:100px;height:100px;" class="float-left  grounded  custom_image">
                     </td>
                     <td  class="text-left">
                         {{cart_item.product.name}}
@@ -98,11 +99,19 @@
                 </table>
                 <div  class="mx_auto">
                     <a  href="{%  url  'ecomapp:allProdCat'   %}"  class="btn btn-secondary   btn-block  my_custom_table"> Continue Shopping</a>
+                    <a href="{% url  'cart:cart_payment'  %}"  class="btn btn-success  btn-block  my_custom_table"> Add Payment</a>
                 </div>
         </div>
     </div>
-</div>
-</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
     {%  endif   %}
+
 </body>
 {%   endblock  %}

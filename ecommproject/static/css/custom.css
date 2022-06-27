@@ -16,10 +16,12 @@
 
 .my_footer{
     background-color: #f8f9fa;
-    height: 60px;
+    height: 40px;
+    position:sticky;
+    bottom:0;
 }
 .my_footer p{
-    padding-top: 20px;
+    padding-top: auto;
     font-size: 14px;
 }
 

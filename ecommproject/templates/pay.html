@@ -1,0 +1,46 @@
+{%  extends  'base.html'  %}
+{%  load static  %}
+{% block metadescription  %}
+     Checkout
+{%  endblock  %}
+{%  block title  %}
+          Payment
+{%  endblock  %}
+{%   block  content  %}
+<div>
+      <div  class="text-center">
+          <br>
+          <h1  class ="text-center   my_title">
+              Add Payment
+          </h1>
+          <br>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                     <table  class="table  my_custom_table">
+                    <thead  class="my_thead">
+                    <tr>
+                        <th>
+                            Checkout
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                        <td  class="text-left">
+                            Your Total is :  <strong> {{total}} </strong>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                    <a  href="{%  url  'cart:cart_payment'   %}"  class="btn btn-success   btn-block  my_custom_table"> Proceed to pay </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}

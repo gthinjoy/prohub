@@ -32,3 +32,5 @@ def  ProDetail(request, c_slug, product_slug):
     except  Exception as e:
         raise e
     return render(request, "product.html", {'product': product})
+
+
