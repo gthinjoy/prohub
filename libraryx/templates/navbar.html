@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+  <a class="navbar-brand" href="#">Library</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{%  url  'books:home' %}">Home</a>
+      <a class="nav-item nav-link" href="{% url 'books:add_book' %}">Add new books</a>
+        <div class="d-flex flex-row align-items-start justify-content-start">
+                {%  if user.is_authenticated  %}
+									<div>Hello {{user.username}}</div>
+									<a class="nav-item nav-link"  href="credentials/logout">Logout</a>
+              {%  else  %}
+									<a class="nav-item nav-link" href="credentials/register">Register</a>
+									<a class="nav-item nav-link"  href="credentials/login">Login</a>
+              {%  endif  %}
+            </div>
+    </div>
+  </div>
+    </div>
+</nav>

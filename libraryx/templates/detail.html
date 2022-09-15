@@ -1,0 +1,27 @@
+{% extends 'base.html'  %}
+{% block body  %}
+<div class="container" style="color:white;">
+    <div class="row">
+        <div class="col-md-6">
+            <br>
+            <hr>
+            <img src="{{book.image.url}}"  height="400" width="400">
+        </div>
+        <div class="col-md-6">
+            <br>
+            <hr>
+            <h2>{{book.name}}</h2><br>
+            <h4>author - {{book.author}}</h4><br>
+            <h5>published year - {{book.year}}</h5><br>
+            <h6>ABOUT</h6><br>
+            <p> {{book.description}}</p>
+            <div id="simple">
+                <div>
+            <a class="btn btn-warning" href="{% url  'books:edit' book.id %}">Edit</a>
+            <a class="btn btn-danger" href="{% url 'books:delete'  book.id %}" >Delete</a>
+            </div>
+            </div>
+            {%  endblock  %}
+        </div>
+    </div>
+</div>

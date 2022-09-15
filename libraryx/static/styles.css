@@ -1,0 +1,13 @@
+
+.card{
+    height: 50px;
+    width:150px;
+}
+
+.card-img-top{
+    height: 200px;
+}
+
+nav{
+background-color: indigo;
+}
